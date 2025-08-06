@@ -12,22 +12,22 @@ be added to the DB.
 
 ### Get all holidays by country `/holiday/{country}`
 
-- GET '/holidays/CA'
-- GET '/holidays/US'
+- GET '/holiday/CA'
+- GET '/holiday/US'
 
 ### Get all holidays by country and year `/holiday/{country}/{year}`
 
-- GET '/holidays/CA/2025'
-- GET '/holidays/US/2026'
+- GET '/holiday/CA/2025'
+- GET '/holiday/US/2026'
 
 ### Get all remaining holidays by country in current year `/holiday/{country}/remaining`
 
-- GET '/holidays/CA/remaining'
-- GET '/holidays/US/remaining'
+- GET '/holiday/CA/remaining'
+- GET '/holiday/US/remaining'
 
 ## Post
 Add new holiday 
-- POST '/holidays' with body
+- POST '/holiday' with body
 ```
 {
     "country": "US",
@@ -38,7 +38,7 @@ Add new holiday
 
 ## Put
 Update holiday by ID
-- PUT '/holidays/{id}' with body
+- PUT '/holiday/{id}' with body
 ```
 {
     "country": "CA",
@@ -49,11 +49,11 @@ Update holiday by ID
 
 ## Delete
 Delete holiday by ID
-- DELETE '/holidays/{id}'
+- DELETE '/holiday/{id}'
 
 ## Upload
 Upload file (example data.csv provided in resources folder)
-- POST '/holidays/upload'
+- POST '/holiday/upload'
 ```
 {
     "file": {multi-part file}, 
