@@ -8,6 +8,27 @@ update. Any dates that were previously saved before a file was uploaded
 will be updated to match the new description. Any new dates will
 be added to the DB.
 
+# Setup
+## Installation
+- Docker [Install Docker](https://www.docker.com/get-started/)
+- Intellij [Install Intellij](https://www.jetbrains.com/idea/download/?section=mac)
+- Postman [Install Postman](https://www.postman.com/downloads/)
+
+## Clone the repo locally
+`git clone https://github.com/ShreyK/Holidays`
+
+## Run postgres locally
+Run `docker-compose up --build` in a terminal under the Holidays repo
+
+## Run the application using your IDE of choice
+Recommended to use Intellij
+
+## Use the postman collection
+Import the postman collection in the repo to use the endpoints easily.
+
+
+# Endpoints
+
 ## Get
 
 ### Get all holidays by country `/holiday/{country}`
