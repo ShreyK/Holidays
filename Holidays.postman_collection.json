@@ -1,0 +1,160 @@
+{
+	"info": {
+		"_postman_id": "996faac9-97f5-4a77-ad95-6104be459fa2",
+		"name": "Holidays",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "47279270",
+		"_collection_link": "https://theshreykhosla-2019256.postman.co/workspace/3fdd5a6c-77f8-4c6e-89a0-46ca30c3b7ac/collection/47279270-996faac9-97f5-4a77-ad95-6104be459fa2?action=share&source=collection_link&creator=47279270"
+	},
+	"item": [
+		{
+			"name": "Get Holiday By Country",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/CA",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"CA"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Holiday By Country And Year",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/CA/2025",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"CA",
+						"2025"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Remaining Holidays By Country",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/2/subordinate",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"2",
+						"subordinate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post Holiday",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"country\": \"US\",\n    \"date\": \"2026-07-04\",\n    \"description\": \"Independance Day\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}",
+					"host": [
+						"{{baseURL}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Holiday By ID",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Employee #1\",\n    \"managerId\": null\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}/1",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Holiday By ID",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/1",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Upload Holiday With File",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "file",
+					"file": {
+						"src": "postman-cloud:///1f072632-6e2e-4c60-818b-d0804a32c7f5"
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}/upload",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"upload"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "baseURL",
+			"value": "http://localhost:8080",
+			"type": "default"
+		}
+	]
+}
